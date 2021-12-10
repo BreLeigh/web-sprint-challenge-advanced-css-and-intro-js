@@ -232,8 +232,9 @@ Example, if getArtistByIndex is invoked with the artists array and the number 0,
 
 function getArtistByIndex(array, index) {
   const name = artists[i].name
+  return `the artist at index ${index} is ${name}`
 }
-return `the artist at index ${index} is ${name}`
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -267,11 +268,11 @@ Use removeArtist to do the following:
 
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(array, index) {
-  let newList = artists.splice(index, 1)
+function removeArtist(array, index, number) {
+  let newList = artists.splice(index, number);
      return newList.length
 }
-console.log('task 5', removeArtist(0));
+console.log('task 5', removeArtist(0,1));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -288,19 +289,13 @@ Use addArtist to do the following:
 3. Return the resulting array
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
-function addArtist(id, name, years, genre, nationality, bio) {
-  // function addArtist(id, name, years, genre, nationality, bio) {
-  //   const newArtists = [
-  //     id: 20,
-  //     name: 'Breanna Potter', 
-  //     years: '1996 - current day',
-  //     genre: 'Web Design', 
-  //     nationality: 'American',
-  //     bio: 'Just your basic average girl. Here to save the world.',
-  //   ]
-  //   let artists = artists.push(newArtists);
-  // }
-}
+
+  function addArtist(id, name, years, genre, nationality, bio) {
+    const newArray = artists.push(id, name, years, genre, nationality, bio);
+    return newArray;
+  }
+
+console.log(addArtist(20, 'Breaana', `1996 - 2021`, `Web Desgin`, 'American', `Basic average girl. Here to save the world.`))
 
 
 
