@@ -231,10 +231,10 @@ Use getArtistByIndex to do the following:
 Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array, index) {
-  const name = artists[i].name
-  return `the artist at index ${index} is ${name}`
+  const artist = artists[index];
+  return "the artist at index"  + index + " is" + artist.name;
 }
-
+console.log(getArtistByIndex(artists, 0));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -290,12 +290,21 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-  function addArtist(id, name, years, genre, nationality, bio) {
-    const newArray = artists.push(id, name, years, genre, nationality, bio);
-    return newArray;
+const breanna = {
+  id: 20,
+  name: "Breanna", 
+  years: "1996 - 2021",
+  genre: "Web Design", 
+  nationality: "American",
+  bio: "Basic average girl. Here to save the world."
+}
+  function addArtist(artist) {
+    artists.push(artist);
+    return artists
   }
+  console.log(addArtist(breanna));
 
-console.log(addArtist(20, 'Breaana', `1996 - 2021`, `Web Desgin`, 'American', `Basic average girl. Here to save the world.`))
+
 
 
 
